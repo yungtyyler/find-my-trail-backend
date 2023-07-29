@@ -1,9 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const Trail = require('../models/trail');
+
+const trailRouter = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+trailRouter.route('/')
+.get((req, res, next) => {
+  Trail.find()
+  .then()
 });
 
 module.exports = router;
